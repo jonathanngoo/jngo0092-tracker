@@ -2,9 +2,9 @@
   "name": "jngo0092-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html",
     "start": "node server.js"
   },
   "author": "",
@@ -12,8 +12,13 @@
   "dependencies": {
     "express": "^4.18.2",
     "node": "^19.8.1",
+    "sass": "^1.62.0",
     "server.js": "^1.0.0",
     "stylelint": "^15.3.0"
   },
-  "npm": "server.js"
+  "npm": "server.js",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
 }

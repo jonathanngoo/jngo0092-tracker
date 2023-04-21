@@ -1,19 +1,19 @@
-const form = document.getElementById('taskform');
-const tasklistElem = document.querySelector('#tasklist');
+const form = document.getElementById("taskform");
+const tasklistElem = document.querySelector("#tasklist");
 
-form.addEventListener('submit', function(event){
+form.addEventListener("submit", function (event) {
   event.preventDefault();
   console.log(form.elements.taskName.value);
   addTask(
     form.elements.taskName.value,
-    form.elements.taskType.value, 
+    form.elements.taskType.value,
     form.elements.taskRate.value,
     form.elements.taskTime.value,
     form.elements.taskClient.value,
     form.elements.taskLocation.value
-  )
+  );
   console.log(taskList);
-})
+});
 
 function displayTask(task) {
   let item = document.createElement("li");
@@ -29,22 +29,20 @@ function displayTask(task) {
   delButton.appendChild(delButtonText);
   item.appendChild(delButton);
 
-
-  delButton.addEventListener('click', function(event){
+  delButton.addEventListener("click", function (event) {
     item.remove();
-    taskList.forEach(function(taskArrayElement, taskArrayIndex){
-      if (taskArrayElement.id == item.getAttribute('data-id')){
-        taskList.splice(taskArrayIndex, 1)
+    taskList.forEach(function (taskArrayElement, taskArrayIndex) {
+      if (taskArrayElement.id == item.getAttribute("data-id")) {
+        taskList.splice(taskArrayIndex, 1);
       }
-    })
+    });
     console.log(taskList);
-  })
-  
+  });
 }
 
 function displayRadioValue() {
   var value = document.getElementsByName("taskLocation").value;
-document.getElementById("taskLocation").innerHTML = value;
+  document.getElementById("taskLocation").innerHTML = value;
 }
 
 // Create an object called 'task'
@@ -64,7 +62,6 @@ document.getElementById("taskLocation").innerHTML = value;
 
 // console.log(task);
 
-
 // Create an array called 'taskList'
 var taskList = [];
 
@@ -74,11 +71,9 @@ var taskList = [];
 // Replace the property values with the input paramaters
 // Add the object to the taskList array
 
-
-function addTask(name, type, rate, time, client,location) {
-
+function addTask(name, type, rate, time, client, location) {
   // Creating the object with the usual property:value syntax
-  // Create task object 
+  // Create task object
   // let task = {
   //   name: name,
   //   type: type,
@@ -98,16 +93,15 @@ function addTask(name, type, rate, time, client,location) {
     rate,
     time,
     client,
-    location
-  }
+    location,
+  };
 
   taskList.push(task);
   displayTask(task);
-
 }
 
 // Call the function with test values for the input paramaters
-addTask("Initial Sketches", "Concept Ideation", 35, 5, "Google","Sydney");
+addTask("Initial Sketches", "Concept Ideation", 35, 5, "Google", "Sydney");
 
 // Log the array to the console.
 console.log(taskList);
