@@ -98,6 +98,40 @@ function addTask(name, type, rate, time, client, location) {
 
   taskList.push(task);
   displayTask(task);
+
+  let listButton = document.createElement("button");
+  listButton.textContent = "Add to list";
+  card.appendChild(listButton);
+
+  listButton.addEventListener("click", function (event) {
+    console.log(country.name.common);
+
+    let listOftasks = JSON.parse(localStorage.getItem("listOftasks"));
+
+    console.log(listOftasks);
+    if (listOftasks == null) {
+      listOftasks = [client];
+    } else {
+      if (
+        listOftasks.find(
+          (element) => element.name.common === client.name.common
+        )
+      ) {
+        console.log("Person already exists");
+      } else {
+        listOftasks.push(client);
+      }
+    }
+
+    localStorage.setItem("listOftasks", JSON.stringify(listOftasks));
+    updateList();
+  });
+}
+
+updateList();
+
+function updateList() {
+  let list;
 }
 
 // Call the function with test values for the input paramaters
