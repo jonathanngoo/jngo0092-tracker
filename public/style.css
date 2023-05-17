@@ -12,7 +12,24 @@
   gap: 8px;
 }
 
-.header { grid-area: header; }
+.header { 
+  grid-area: header; 
+  background-color:blue;
+}
+
+/* Removing dot points from this link https://www.w3schools.com/css/css_navbar.asp  */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+
+
 .leftSide { grid-area: leftSide; }
 .body { grid-area: body; }
 .rightSide { grid-area: rightSide; }
