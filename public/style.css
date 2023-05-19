@@ -32,7 +32,14 @@ li {
 
 .leftSide { grid-area: leftSide; }
 .body { grid-area: body; }
-.rightSide { grid-area: rightSide; }
+.rightSide { 
+  grid-area: rightSide; 
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
 .footer { grid-area: footer; }
 
 html {
@@ -43,6 +50,7 @@ html {
                   
   header > h1 {
     text-align: center;
+    margin-top: 25em;
   }
                   
   form {
@@ -50,6 +58,11 @@ html {
     margin: 0 auto;
     border: 2px solid grey;
     padding: 2em 1em;
+    margin-top: 10em;
+  }
+
+  .figcaption {
+    align-self: flex-end;
   }
   
   
@@ -70,6 +83,3 @@ html {
     flex-grow: 1;
   }
 
-
-
- 
