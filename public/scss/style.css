@@ -10,7 +10,7 @@
     "footer footer footer" auto
     / auto 1fr auto;
   gap: 8px;
-}
+} 
 
 .header { 
   grid-area: header; 
@@ -18,8 +18,8 @@
 }
 
 /* Removing dot points from this link https://www.w3schools.com/css/css_navbar.asp  */
-ul {
-  list-style-type: none;
+ ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -69,3 +69,7 @@ html {
     padding: .5em;
     flex-grow: 1;
   }
+
+
+
+ 
