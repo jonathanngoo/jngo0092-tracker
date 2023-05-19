@@ -4,9 +4,10 @@
   height: 768px;
 
   display: flex;
+  flex-direction: column;
   grid:
     "header header header" auto
-    "leftSide body rightSide" 1fr
+    "leftSide body rightside" 1fr
     "footer footer footer" auto
     / auto 1fr auto;
   gap: 8px;
