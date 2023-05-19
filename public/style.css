@@ -14,7 +14,6 @@
 
 .header { 
   grid-area: header; 
-  background-color:blue;
 }
 
 /* Removing dot points from this link https://www.w3schools.com/css/css_navbar.asp  */
