@@ -91,11 +91,21 @@
     <form id="taskform">
       <div class="form-row">
         <label for="User First Name">User First Name</label>
-        <input type="text" name="UserfirstName" id="UserfirstName" required="true" />
+        <input
+          type="text"
+          name="UserfirstName"
+          id="UserfirstName"
+          required="true"
+        />
       </div>
       <div class="form-row">
         <label for="User Last Name">User Last Name</label>
-        <input type="text" name="UserlastName" id="UserlastName" required="true" />
+        <input
+          type="text"
+          name="UserlastName"
+          id="UserlastName"
+          required="true"
+        />
       </div>
       <div class="form-row">
         <label for="User Id">User Id</label>
@@ -103,7 +113,7 @@
       </div>
       <div class="form-row">
         <label for="Movie Genre">Movie Genre</label>
-              <!-- <input type="text" name="taskType" id="taskType" required="true" /> -->
+        <!-- <input type="text" name="taskType" id="taskType" required="true" /> -->
         <select name="taskType" id="taskType" required="true">
           <option value="">Select Genre</option>
           <option value="Action">Action</option>
@@ -114,7 +124,12 @@
       </div>
       <div class="form-row">
         <label for="phoneNumber">Phone Number</label>
-        <input type="number" name="phoneNumber" id="phoneNumber" required="true" />
+        <input
+          type="number"
+          name="phoneNumber"
+          id="phoneNumber"
+          required="true"
+        />
       </div>
       <div class="form-row">
         <label for="Email">Email</label>
@@ -128,29 +143,29 @@
       <div class="form-row">
         <label for="Rating">Rating</label>
         <label>
-          <input type="radio" name="stars" value="1"/>
+          <input type="radio" name="stars" value="1" />
           <span class="icon">★</span>
         </label>
         <label>
-          <input type="radio" name="stars" value="2"/>
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-        </label>
-        <label>
-          <input type="radio" name="stars" value="3"/>
-          <span class="icon">★</span>
+          <input type="radio" name="stars" value="2" />
           <span class="icon">★</span>
           <span class="icon">★</span>
         </label>
         <label>
-          <input type="radio" name="stars" value="4"/>
-          <span class="icon">★</span>
+          <input type="radio" name="stars" value="3" />
           <span class="icon">★</span>
           <span class="icon">★</span>
           <span class="icon">★</span>
         </label>
         <label>
-          <input type="radio" name="stars" value="5"/>
+          <input type="radio" name="stars" value="4" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="5" />
           <span class="icon">★</span>
           <span class="icon">★</span>
           <span class="icon">★</span>
@@ -161,8 +176,8 @@
       <!-- Created a file input type for user to get images and display on website https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document.-->
       <div class="form-row">
         <label for="movieImage">Movie image:</label>
-        <input type="file" accept="image/*" onchange="loadFile(event)">
-        <p><img id="output" width="300"/></p>
+        <input type="file" accept="image/*" onchange="loadFile(event)" />
+        <p><img id="output" width="300" /></p>
       </div>
       <div class="form-row">
         <input type="submit" />
