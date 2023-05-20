@@ -1,3 +1,10 @@
+// Adding image and displaying on form from https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document. 
+var loadFile = function(event) {
+  var image = document.getElementById("output");
+  image.src=URL.createObjectURL(event.target.files[0]);
+};
+
+
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");
 

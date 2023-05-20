@@ -86,54 +86,83 @@
       <div class="footer">5</div>
     </section>
     <header>
-      <h1>Task Tracker</h1>
+      <h1>Log Movies</h1>
     </header>
     <form id="taskform">
       <div class="form-row">
-        <label for="taskName">Name</label>
-        <input type="text" name="taskName" id="taskName" required="true" />
+        <label for="User First Name">User First Name</label>
+        <input type="text" name="UserfirstName" id="UserfirstName" required="true" />
       </div>
       <div class="form-row">
-        <label for="taskType">Type</label>
-        <!--       <input type="text" name="taskType" id="taskType" required="true" /> -->
+        <label for="User Last Name">User Last Name</label>
+        <input type="text" name="UserlastName" id="UserlastName" required="true" />
+      </div>
+      <div class="form-row">
+        <label for="User Id">User Id</label>
+        <input type="number" name="UserId" id="UserId" required="true" />
+      </div>
+      <div class="form-row">
+        <label for="Movie Genre">Movie Genre</label>
+              <!-- <input type="text" name="taskType" id="taskType" required="true" /> -->
         <select name="taskType" id="taskType" required="true">
-          <option value="">Select an option</option>
-          <option value="Concept Ideation">Concept Ideation</option>
-          <option value="Wireframe Design">Wireframe Design</option>
-          <option value="Application Coding">Application Coding</option>
-          <option value="Testing/Debugging">Testing/Debugging</option>
+          <option value="">Select Genre</option>
+          <option value="Action">Action</option>
+          <option value="Horror">Horror</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Science fiction">Science fiction</option>
         </select>
       </div>
       <div class="form-row">
-        <label for="taskRate">Rate</label>
-        <input type="number" name="taskRate" id="taskRate" required="true" />
+        <label for="phoneNumber">Phone Number</label>
+        <input type="number" name="phoneNumber" id="phoneNumber" required="true" />
       </div>
       <div class="form-row">
-        <label for="taskTime">Time</label>
-        <input type="number" name="taskTime" id="taskTime" required="true" />
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email" required="true" />
       </div>
       <div class="form-row">
-        <label for="taskClient">Client</label>
-        <input type="text" name="taskClient" id="taskClient" required="true" />
+        <label for="movieName">Movie Name</label>
+        <input type="text" name="movieName" id="movieName" required="true" />
       </div>
+      <!-- Added a rating system from https://codepen.io/neilpomerleau/pen/wzxzQM  -->
       <div class="form-row">
-        <label for="taskLocation">Location</label>
-        <input
-          type="radio"
-          id="taskLocation"
-          name="taskLocation"
-          value="Sydney"
-          required="true"
-        />
-        <label for="Sydney">Sydney</label>
-        <input
-          type="radio"
-          id="taskLocation"
-          name="taskLocation"
-          value="Melbourne"
-          required="true"
-        />
-        <label for="Melbourne">Melbourne</label>
+        <label for="Rating">Rating</label>
+        <label>
+          <input type="radio" name="stars" value="1"/>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="2"/>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="3"/>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="4"/>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="5"/>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+      </div>
+      <!-- Created a file input type for user to get images and display on website https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document.-->
+      <div class="form-row">
+        <label for="movieImage">Movie image:</label>
+        <input type="file" accept="image/*" onchange="loadFile(event)">
+        <p><img id="output" width="300"/></p>
       </div>
       <div class="form-row">
         <input type="submit" />
