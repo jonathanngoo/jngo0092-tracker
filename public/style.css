@@ -58,7 +58,7 @@ html {
     margin: 0 auto;
     /* border: 2px solid grey; */
     padding: 2em 1em;
-    margin-top: -16em;
+    margin-top: -10em;
     text-align: left;
     margin-left: 1em;
   }
@@ -82,7 +82,9 @@ html {
   .form-row > input,
   .form-row > select{
     padding: .5em;
-    flex-grow: 1;
+    flex-grow: 0.4;
+    margin-right: -10em;
+    margin-top: -2em;
   }
 
   .Tasks{
