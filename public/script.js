@@ -4,6 +4,12 @@ var loadFile = function(event) {
   image.src=URL.createObjectURL(event.target.files[0]);
 };
 
+// Displaying data from form individually https://www.youtube.com/watch?v=f3fALMAVBOE
+document.querySelector(document).ready (function(){
+  document.querySelector("#name").on("change", function(){
+    document.querySelector("data").hide ();
+  }).addEventListener("change",);
+});
 
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");
@@ -106,7 +112,9 @@ function addTask(name, type, rate, time, client, location) {
   taskList.push(task);
   displayTask(task);
 
+
   let listButton = document.createElement("button");
+  let card = document.createElement("card");
   listButton.textContent = "Add to list";
   card.appendChild(listButton);
 

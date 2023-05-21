@@ -58,7 +58,7 @@ html {
     margin: 0 auto;
     /* border: 2px solid grey; */
     padding: 2em 1em;
-    margin-top: 10em;
+    margin-top: -16em;
     text-align: left;
     margin-left: 1em;
   }
@@ -83,5 +83,53 @@ html {
   .form-row > select{
     padding: .5em;
     flex-grow: 1;
+  }
+
+  .Tasks{
+    margin-left: 60em;
+  }
+
+   .content{
+    margin: auto;
+  }
+
+  .content .data {
+    padding: auto;
+    background-color: #679AF5;
+    border: 2px solid #679AF5;
+    /* border-radius: 2px; */
+    margin-right: 8em;
+  }
+
+  .content p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .content p span {
+    float: right;
+  }
+  
+  .image{
+    text-align: left;
+  }
+
+  .data{
+    display: none;
+  }
+
+  .select{
+    width:auto;
+    border: none;
+    border-radius: 2px;
+    background-color: #679AF5;
+    padding: auto;
+    padding-right: 8.5em;
+    padding-left: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+    color:white;
   }
 
