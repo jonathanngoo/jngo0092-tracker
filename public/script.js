@@ -18,6 +18,11 @@ function getDate() {
   document.getElementById("date").value = today.getFullYear() + "-" + ("0" + (today.getMonth() + 1)).slice(-2) + "-" + ("0" + today.getDate()).slice(-2);
 }
 
+// Adding a rating system when the user types their movie name https://codepen.io/neilpomerleau/pen/wzxzQM
+$(":radio").change(function() {
+  console.log("New star rating: " + this.value);
+});
+
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");
 
