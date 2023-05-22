@@ -20,8 +20,9 @@
           <li><a href="#logmovies"><b>Log movies</b></a></li>
         </ul>
       </div>
-      <div class="leftSide">2</div>
+      <div class="leftSide"></div>
       <div class="body">
+        <div class="titleImages">
         <img
           src="/public/title images/WhiteNoise.jpeg"
           alt="White Noise"
@@ -39,13 +40,18 @@
           width="200"
           height="295"
         />
+        </div>
+        <div class="Context">
         <h2><b>Context</b></h2>
+        </div>
         <p>
           This website will allow you to track <br />
           your media consumption and view <br />
           that other viewers are watching
         </p>
+        <div class="typesOfgenresTitle">
         <h2><b>Types of genres</b></h2>
+        </div>
       </div>
       <div class="rightSide">
         <figure>
@@ -86,10 +92,14 @@
       <div class="footer">5</div>
     </section>
     <header>
+      <div class="logMovies">
       <h1>Log Movies</h1>
+      </div>
     </header>
     <div class="Tasks">
+      <div class="taskTitle">
       <h2>Tasks</h2>
+      </div>
       <h3>Name</h3>
       <select class="select" name="Task" id="Task">
         <option value="task1">task1</option>
@@ -103,7 +113,7 @@
           <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
-          <p><b>Data Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
@@ -115,7 +125,7 @@
         <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
-        <p><b>Data Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
@@ -127,7 +137,7 @@
         <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
-        <p><b>Data Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
@@ -139,7 +149,7 @@
         <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
-        <p><b>Data Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
@@ -151,7 +161,7 @@
         <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
-        <p><b>Data Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
         <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
@@ -163,7 +173,7 @@
     </div>
     <form id="taskform">
       <div class="form-row">
-        <label for="User First Name">User First Name <input
+        <label for="User First Name"> <b>User First Name</b> <input
           type="text"
           name="UserfirstName"
           id="UserfirstName"
@@ -171,7 +181,7 @@
         /></label>
       </div>
       <div class="form-row">
-        <label for="User Last Name">User Last Name  <input
+        <label for="User Last Name"> <b>User Last Name </b> <input
           type="text"
           name="UserlastName"
           id="UserlastName"
@@ -179,10 +189,13 @@
         /></label>
       </div>
       <div class="form-row">
-        <label for="User Id">User Id<input type="number" name="UserId" id="UserId" required="true" /></label>
+        <label for="User Id"> <b>User Id</b><input type="number" name="UserId" id="UserId" required="true" /></label>
       </div>
       <div class="form-row">
-        <label for="Movie Genre">Movie Genre  <select name="taskType" id="taskType" required="true">
+        <label for="Date Submitted"><b>Date Submitted  <input type="date" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
+      </div>
+      <div class="form-row">
+        <label for="Movie Genre"> <b>Movie Genre</b><select name="taskType" id="taskType" required="true">
           <option value="">Select Genre</option>
           <option value="Action">Action</option>
           <option value="Horror">Horror</option>
@@ -192,7 +205,7 @@
         <!-- <input type="text" name="taskType" id="taskType" required="true" /> -->
       </div>
       <div class="form-row">
-        <label for="phoneNumber">Phone Number  <input
+        <label for="phoneNumber"> <b>Phone Number</b>  <input
           type="number"
           name="phoneNumber"
           id="phoneNumber"
@@ -200,14 +213,14 @@
         /></label>
       </div>
       <div class="form-row">
-        <label for="Email">Email<input type="text" name="Email" id="Email" required="true" /></label>
+        <label for="Email"> <b>Email</b> <input type="text" name="Email" id="Email" required="true" /></label>
       </div>
       <div class="form-row">
-        <label for="movieName">Movie Name<input type="text" name="movieName" id="movieName" required="true" /></label>
+        <label for="movieName"> <b>Movie Name</b><input type="text" name="movieName" id="movieName" required="true" /></label>
       </div>
       <!-- Added a rating system from https://codepen.io/neilpomerleau/pen/wzxzQM  -->
       <div class="form-row">
-        <label for="Rating">Rating<label>
+        <label for="Rating"> <b>Rating</b><label>
           <input type="radio" name="stars" value="1" />
           <span class="icon">★</span>
         </label>
@@ -240,7 +253,7 @@
       </div>
       <!-- Created a file input type for user to get images and display on website https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document.-->
       <div class="form-row">
-        <label for="movieImage">Movie image:  <input type="file" accept="image/*" onchange="loadFile(event)" />
+        <label for="movieImage"> <b>Movie image:</b> <input type="file" accept="image/*" onchange="loadFile(event)" />
           <p><img id="output" width="300" /></p></label>
       </div>
       <div class="form-row">
@@ -249,7 +262,7 @@
     </form>
     <main>
       <section>
-        <p>Testing</p>
+        <!-- <p>Testing</p> -->
       </section>
     </main>
     <script src="script.js"></script>

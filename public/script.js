@@ -11,6 +11,13 @@ document.querySelector(document).ready (function(){
   }).addEventListener("change",);
 });
 
+// Generating today's date from server https://stackoverflow.com/questions/71953018/html-input-date-field-how-to-set-default-value-to-todays-date
+function getDate() {
+  var today = new Date();
+
+  document.getElementById("date").value = today.getFullYear() + "-" + ("0" + (today.getMonth() + 1)).slice(-2) + "-" + ("0" + today.getDate()).slice(-2);
+}
+
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");
 
