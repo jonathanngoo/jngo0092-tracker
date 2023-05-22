@@ -21,6 +21,10 @@ h1{
   /* color: white; */
 }
 
+.Movies {
+  color: white;
+}
+
 h2{
   margin-left: 9em;
   margin-top: 0.5em;
@@ -40,7 +44,6 @@ img {
   max-width: 100%;
   height: auto;
   margin-left: 2em;
-
 }
 
 html {
@@ -75,6 +78,7 @@ html {
   margin-right: -2.5em;
 }
 
+
 /* Removing dot points from this link https://www.w3schools.com/css/css_navbar.asp  */
  ul {
   list-style: none;
@@ -96,6 +100,7 @@ li a {
   color: white;
   text-align: left;
   text-decoration: none;
+  padding: 0.5em;
 }
 
 
@@ -109,6 +114,37 @@ li a {
 
 .titleImages {
   margin-left: -5em;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+/* Animation for title images and compatibility with all browsers https://blog.hubspot.com/website/css-fade-in */
+@keyframes titleImages {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@-moz-keyframes titleImages {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@-webkit-keyframes titleImages {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@-o-keyframes titleImages {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
+@-ms-keyframes titleImages {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
 }
 
 .Context {
@@ -221,9 +257,27 @@ li a {
     color: white;
     font-size: 1em;
   }
+  
+  button[type=trashBin] {
+    background-color: #679AF5;
+    margin-left: 2em;
+    border: 0;
+  }
+
+  .trashBin {
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+    margin-top: 0.5em;
+  }
+
+  .trashBinbutton {
+    margin-left: 18em;
+    margin-top: -3em;
+  }
 
   .Tasks{
-    margin-left: 60em;
+    margin-left: 50em;
   }
 
   .taskTitle{
@@ -360,13 +414,31 @@ li a {
 .Footer {
   background-color: #59D4C0;
   margin:auto;
+  color:black;
 }
 
-li b {
+li c {
   color: black;
   text-align: left;
   text-decoration: none;
 }
 
+.footerButtons {
+  color: black;
+  padding: 0.5em;
+}
 
+@media only screen and (max-width: 528px) {
+  body {
+    background-color: red;
+    flex-direction: column;
+  }
+
+  .titleImages {
+    width: 40%;
+    flex-direction: column;
+    margin-left: -16em;
+  }
+
+}
 

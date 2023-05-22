@@ -13,8 +13,8 @@
     <!-- Generate HTML layout from https://layout.bradwoods.io/customize -->
     <section class="layout">
       <div class="header">
-        <h1>Movies</h1>
-        <ul>
+        <h1 class="Movies">Movies</h1>
+        <ul class="navigationTopmenu">
           <li><a href="#home"><b>Home</b></a></li>
           <li><a href="#about"><b>About</b></a></li>
           <li><a href="#logmovies"><b>Log movies</b></a></li>
@@ -107,8 +107,13 @@
         <option value="task4">task4</option>
         <option value="task5">task5</option>
       </select>
+      <div class="trashBinbutton">
+      <button type="trashBin">
+        <img class="trashBin" src="trash bin/wastebasket.png" width="30" height="40">
+      </button>
+      </div>
       <div class="content">
-        <ul id="task1" class="data">
+        <ul id="taskList" class="data">
           <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
           <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
@@ -172,7 +177,7 @@
     </div>
     <form id="taskform">
       <div class="form-row">
-        <label for="User First Name"> <b>User First Name</b> <input
+        <label for="UserFirstName"> <b>User First Name</b> <input
           type="text"
           name="UserfirstName"
           id="UserfirstName"
@@ -180,7 +185,7 @@
         /></label>
       </div>
       <div class="form-row">
-        <label for="User Last Name"> <b>User Last Name </b> <input
+        <label for="UserLastName"> <b>User Last Name </b> <input
           type="text"
           name="UserlastName"
           id="UserlastName"
@@ -188,13 +193,13 @@
         /></label>
       </div>
       <div class="form-row">
-        <label for="User Id"> <b>User Id</b><input type="number" name="UserId" id="UserId" required="true" /></label>
+        <label for="UserId"> <b>User Id</b><input type="number" name="UserId" id="UserId" required="true" /></label>
       </div>
       <div class="form-row">
-        <label for="Date Submitted"><b>Date Submitted  <input type="date" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
+        <label for="DateSubmitted"><b>Date Submitted  <input type="date" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
       </div>
       <div class="form-row">
-        <label for="Movie Genre"> <b>Movie Genre</b><select name="taskType" id="taskType" required="true">
+        <label for="MovieGenre"> <b>Movie Genre</b><select name="taskType" id="taskType" required="true">
           <option value="">Select Genre</option>
           <option value="Action">Action</option>
           <option value="Horror">Horror</option>
@@ -267,9 +272,9 @@
     </form>
     <div class="footer">
       <ul class="Footer">
-      <li><b href="#FAQ"><b>FAQ</b></b></li>
-      <li><b href="#TermsandConditions"><b>T&Cs</b></b></li>
-      <li><b href="#Help"><b>Help</b></b></li>
+      <li class="footerButtons"><c href="#FAQ"><b>FAQ</b></c></li>
+      <li class="footerButtons"><c href="#TermsandConditions"><b>T&Cs</b></c></li>
+      <li class="footerButtons"><c href="#Help"><b>Help</b></c></li>
       </ul>
   </div>
     <main>
