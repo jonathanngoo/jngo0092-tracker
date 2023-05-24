@@ -6,11 +6,14 @@ var loadFile = function (event) {
 
 // Displaying data from form individually https://www.youtube.com/watch?v=f3fALMAVBOE
 var content = document.getElementById("content");
-document.querySelector(content).onDOMContentLoaded = function(){
-  document.getElementById("name").addEventListener('change', (e) => {
-  document.getElementByClassName("data") .style.display = "none";
-  $("#" + this.value).fadeIn(700) ;
-  }).change();
+document.querySelector(content).onDOMContentLoaded = function () {
+  document
+    .getElementById("name")
+    .addEventListener("change", (e) => {
+      document.getElementByClassName("data").style.display = "none";
+      $("#" + this.value).fadeIn(700);
+    })
+    .change();
 };
 
 // Generating today's date from server https://stackoverflow.com/questions/71953018/html-input-date-field-how-to-set-default-value-to-todays-date
@@ -26,8 +29,8 @@ function getDate() {
 }
 
 // Adding a rating system when the user types their movie name https://codepen.io/neilpomerleau/pen/wzxzQM
-document.querySelector('radio').addEventListener('change',function(){
-  console.log('New star rating: ' + this.value);
+document.querySelector("radio").addEventListener("change", function () {
+  console.log("New star rating: " + this.value);
 });
 
 // Reveals tasks after user clicks submit from https://bobbyhadz.com/blog/javascript-show-hide-form-on-click
@@ -43,6 +46,7 @@ submit.addEventListener("click", () => {
   }
 });
 
+// Creating a form for the user to input their information
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");
 
@@ -64,6 +68,7 @@ form.addEventListener("submit", function (event) {
   console.log(taskList);
 });
 
+// Tasks are displayed from drop down menu
 function displayTask(task) {
   let item = document.createElement("li");
   item.setAttribute("data-id", task.id);
@@ -89,10 +94,11 @@ function displayTask(task) {
   });
 }
 
-function displayRadioValue() {
-  var value = document.getElementsByName("UserFirstName").value;
-  document.getElementById("UserFirstName").innerHTML = value;
-}
+// function displayRadioValue() {
+//   var value = document.getElementsByName("UserFirstName").value;
+//   document.getElementById("UserFirstName").innerHTML = value;
+//   console.log(displayRadioValue);
+// }
 
 // Create an object called 'task'
 // Populate the properties based on the provided data model
@@ -111,30 +117,22 @@ function displayRadioValue() {
 
 // console.log(task);
 
-// Create an array called 'taskList'
+// Adding task list when the user submits the form
 var taskList = [];
 
-// Create a function called 'addTask'
-// Give the function input parameters for: name, type, rate, time, client
-// Paste your object definition from above in the function
-// Replace the property values with the input paramaters
-// Add the object to the taskList array
-
-function addTask(userfirstname, userlastname, userid, datesubmitted, moviegenre, phonenumber
-  ,email, moviename, rating, movieimage) {
-  // Creating the object with the usual property:value syntax
-  // Create task object
-  // let task = {
-  //   name: name,
-  //   type: type,
-  //   id: Date.now(),
-  //   date: new Date().toISOString(),
-  //   rate: rate,
-  //   time: time,
-  //   client: client
-  // }
-
-  // Creating the object, directly passing in the input parameters
+function addTask(
+  userfirstname,
+  userlastname,
+  userid,
+  datesubmitted,
+  moviegenre,
+  phonenumber,
+  email,
+  moviename,
+  rating,
+  movieimage
+) {
+  // Creating task list to displayed when user selects their tasks
   let task = {
     userfirstname,
     userlastname,
@@ -156,6 +154,7 @@ function addTask(userfirstname, userlastname, userid, datesubmitted, moviegenre,
   listButton.textContent = "Add to list";
   card.appendChild(listButton);
 
+  // When users clicks submit, it displays list of tasks from content div tag
   listButton.addEventListener("click", function (event) {
     console.log(user.name.common);
 
@@ -183,12 +182,8 @@ function addTask(userfirstname, userlastname, userid, datesubmitted, moviegenre,
 
 updateList();
 
-function updateList() {
-  let list;
-}
+// function updateList() {
+//   let list;
+// }
 
-// Call the function with test values for the input paramaters
-// addTask("Initial Sketches", "Concept Ideation", 35, 5, "Google", "Sydney");
-
-// Log the array to the console.
 console.log(taskList);
