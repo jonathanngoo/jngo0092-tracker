@@ -193,7 +193,7 @@
         /></label>
       </div>
       <div class="form-row">
-        <label for="UserId"> <b>User Id</b><input type="number" name="UserId" id="UserId" required="true" /></label>
+        <label for="UserId"> <b>User Id</b><input type="number" min="400000000" max="600000000" name="UserId" id="UserId" required="true" /></label>
       </div>
       <div class="form-row">
         <label for="DateSubmitted"><b>Date Submitted  <input type="date" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
@@ -211,6 +211,8 @@
       <div class="form-row">
         <label for="phoneNumber"> <b>Phone Number</b>  <input
           type="number"
+          min="0100000000"
+          max="1000000000"
           name="phoneNumber"
           id="phoneNumber"
           required="true"
