@@ -14,6 +14,7 @@ body, h1, h2, h4, h5, h6, p, ol, ul {
   /* font-weight: normal; */
 }
 
+/* Own css starts from here  */
 h1{
   margin: auto;
     margin-left: 27em;
@@ -114,6 +115,7 @@ li a {
 
 .titleImages {
   margin-left: -5em;
+  /* Animation is applied to all devices */
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
   -moz-animation: fadeIn 5s;
@@ -155,6 +157,7 @@ li a {
   margin-left: 0em;
 }
 
+/* It's used to place genre images using 2 by 2 layout */
 .rightSide { 
   grid-area: rightSide; 
   display: flex;
@@ -417,6 +420,7 @@ li a {
   color:black;
 }
 
+/* Buttons applied to the footer  */
 li c {
   color: black;
   text-align: left;
@@ -428,6 +432,7 @@ li c {
   padding: 0.5em;
 }
 
+/* Resolution applied to mobile */
 @media only screen and (max-width: 528px) {
   body {
     background: linear-gradient(#C1F1F7,#70DDEB);
