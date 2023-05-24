@@ -5,15 +5,13 @@ var loadFile = function (event) {
 };
 
 // Displaying data from form individually https://www.youtube.com/watch?v=f3fALMAVBOE
-var content= document.getElementById("content");
-document.addEventListener("DOMContentLoaded",function () {
-  document
-    .querySelector("#name")
-    .querySelector("change", function () {
-      document.querySelector("data").hide();
-    })
-    .addEventListener("change");
-});
+var content = document.getElementById("content");
+document.querySelector(content).onDOMContentLoaded = function(){
+  document.getElementById("name").addEventListener('change', (e) => {
+  document.getElementByClassName("data") .style.display = "none";
+  $("#" + this.value).fadeIn(700) ;
+  }).change();
+};
 
 // Generating today's date from server https://stackoverflow.com/questions/71953018/html-input-date-field-how-to-set-default-value-to-todays-date
 function getDate() {
@@ -28,8 +26,21 @@ function getDate() {
 }
 
 // Adding a rating system when the user types their movie name https://codepen.io/neilpomerleau/pen/wzxzQM
-document.querySelector('radio').addEventListener('change',function () {
+document.querySelector('radio').addEventListener('change',function(){
   console.log('New star rating: ' + this.value);
+});
+
+// Reveals tasks after user clicks submit from https://bobbyhadz.com/blog/javascript-show-hide-form-on-click
+const submit = document.getElementByType("submit");
+
+submit.addEventListener("click", () => {
+  const Task = document.getElementByClass("Tasks");
+
+  if (Task.style.display === "none") {
+    Task.style.display = "block";
+  } else {
+    Task.style.display = "none";
+  }
 });
 
 const form = document.getElementById("taskform");
