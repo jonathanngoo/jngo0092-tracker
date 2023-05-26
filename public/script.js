@@ -6,14 +6,11 @@ var loadFile = function (event) {
 
 // Displaying data from form individually https://www.youtube.com/watch?v=f3fALMAVBOE
 var content = document.getElementById("content");
-document.querySelector(content).onDOMContentLoaded = function () {
-  document
-    .getElementById("name")
-    .addEventListener("change", (e) => {
-      document.getElementByClassName("data").style.display = "none";
-      $("#" + this.value).fadeIn(700);
-    })
-    .change();
+document.querySelector(content) .DOMContentLoaded = (document) => {
+  document.querySelector('#name').on('change', function(){
+  document.querySelector('.data')|
+  document.querySelector('#' + document.querySelector(this).value).fadeIn(700);
+});
 };
 
 // Generating today's date from server https://stackoverflow.com/questions/71953018/html-input-date-field-how-to-set-default-value-to-todays-date
