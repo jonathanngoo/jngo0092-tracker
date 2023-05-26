@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>JS Task List</title>
+    <!-- <link rel="stylesheet" href="reset.css"/> -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="scss/main.scss" /> -->
+  </head>
+
+  <body>
+    <!-- Generate HTML layout from https://layout.bradwoods.io/customize -->
+    <section class="layout">
+      <div class="header">
+        <h1 class="Movies">Movies</h1>
+        <ul class="navigationTopmenu">
+          <li><a href="#home"><b>Home</b></a></li>
+          <li><a href="#about"><b>About</b></a></li>
+          <li><a href="#logmovies"><b>Log movies</b></a></li>
+        </ul>
+      </div>
+      <div class="leftSide"></div>
+      <div class="body">
+        <!-- Title images are below the header to give an impression to the user about the website  -->
+        <div class="titleImages">
+        <img
+          src="/public/title images/WhiteNoise.jpeg"
+          alt="White Noise"
+          width="200"
+        />
+        <img
+          src="/public/title images/TrueSpirit.jpeg"
+          alt="True Spirit"
+          width="200"
+          height="295"
+        />
+        <img
+          src="/public/title images/Luther.jpeg"
+          alt="Luther"
+          width="200"
+          height="295"
+        />
+        </div>
+        <!-- Context is positioned below title images  -->
+        <div class="Context">
+        <h2><b>Context</b></h2>
+        </div>
+        <p>
+          This website will allow you to track <br />
+          your media consumption and view <br />
+          that other viewers are watching
+        </p>
+        <!-- Types of genres is below context with 2 by 2 layout for images -->
+        <div class="typesOfgenresTitle">
+        <h2><b>Types of genres</b></h2>
+        </div>
+      </div>
+      <div class="rightSide">
+        <figure>
+          <img
+            src="/public/genre images/Action_Genre.jpg"
+            alt="ActionGenre"
+            width="300"
+          />
+          <figcaption>Action</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/public/genre images/Drama_Genre.webp"
+            alt="DramaGenre"
+            width="300"
+          />
+          <figcaption>Drama</figcaption>
+        </figure>
+      </div>
+      <div class="rightSide">
+        <figure>
+          <img
+            src="/public/genre images/Science_Fiction_Genre.jpeg"
+            alt="ScienceFiction"
+            width="300"
+          />
+          <figcaption>Science Fiction</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="/public/genre images/Adventure_Genre.png"
+            alt="AdventureGenre"
+            width="300"
+          />
+          <figcaption>Adventure</figcaption>
+        </figure>
+      </div>
+    </section>
+    <header>
+      <!-- Log movies title is below types of genres  -->
+      <div class="logMovies">
+      <h1>Log Movies</h1>
+      </div>
+    </header>
+    <div class="Tasks">
+      <div id="hideButton" class="hidden">
+      <div class="taskTitle">
+      <h2>Tasks</h2>
+      </div>
+    </div>
+      <!-- Users can select their own tasks -->
+      <h3 class="selectYourtask">Select your task</h3>
+      <select class="select" name="Task" id="Task">
+        <option value="task1">task1</option>
+        <option value="task2">task2</option>
+        <option value="task3">task3</option>
+        <option value="task4">task4</option>
+        <option value="task5">task5</option>
+      </select>
+      <!-- Users have the option to remove a list from their tasks -->
+      <div id="hideButton" class="hidden">
+      <div class="trashBinbutton">
+      <button type="trashBin">
+        <img class="trashBin" src="trash bin/wastebasket.png" width="30" height="40">
+      </button>
+      </div>
+    </div>
+      <!-- Content div tag contains a list of information from user input -->
+      <div class="content">
+        <ul id="taskList" class="data">
+          <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Movie Name:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p><b>Movie Rating:</b></p><span><ul id="tasklist"></ul></span></p>
+          <p class="image"><p><img id="output" width="300"/></p></p>
+        </ul>
+        <ul id="task2" class="data">
+        <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Name:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Rating:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p class="image"><p><img id="output" width="300"/></p></p>
+        </ul>
+        <ul id="task3" class="data">
+        <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Name:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Rating:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p class="image"><p><img id="output" width="300"/></p></p>
+        </ul>
+        <ul id="task4" class="data">
+        <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Name:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Rating:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p class="image"><p><img id="output" width="300"/></p></p>
+        </ul>
+        <ul id="task5" class="data">
+        <p><b>User First Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Last Name</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>User Id:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Date Submitted:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Genre:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Phone Number:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Email:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Name:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p><b>Movie Rating:</b></p><span><ul id="tasklist"></ul></span></p>
+        <p class="image"><p><img id="output" width="300"/></p></p>
+        </ul>
+      </div>
+    </div>
+    <!-- Information is filled out in an chronological order -->
+    <form id="taskform">
+      <div class="form-row">
+        <label for="UserFirstName"> <b>User First Name</b> <input
+          type="text"
+          name="UserfirstName"
+          id="UserfirstName"
+          required="true"
+        /></label>
+      </div>
+      <div class="form-row">
+        <label for="UserLastName"> <b>User Last Name </b> <input
+          type="text"
+          name="UserlastName"
+          id="UserlastName"
+          required="true"
+        /></label>
+      </div>
+      <div class="form-row">
+        <label for="UserId"> <b>User Id</b><input type="number" min="400000000" max="600000000" name="UserId" id="UserId" required="true" /></label>
+      </div>
+      <div class="form-row">
+        <label for="DateSubmitted"><b>Date Submitted  <input type="date" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
+      </div>
+      <div class="form-row">
+        <label for="MovieGenre"> <b>Movie Genre</b><select name="taskType" id="taskType" required="true">
+          <option value="">Select Genre</option>
+          <option value="Action">Action</option>
+          <option value="Horror">Horror</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Science fiction">Science fiction</option>
+        </select></label>
+        <!-- <input type="text" name="taskType" id="taskType" required="true" /> -->
+      </div>
+      <div class="form-row">
+        <label for="phoneNumber"> <b>Phone Number</b>  <input
+          type="number"
+          min="0100000000"
+          max="1000000000"
+          name="phoneNumber"
+          id="phoneNumber"
+          required="true"
+        /></label>
+      </div>
+      <div class="form-row">
+        <label for="Email"> <b>Email</b> <input type="text" name="Email" id="Email" required="true" /></label>
+      </div>
+      <div class="form-row">
+        <label for="movieName"> <b>Movie Name</b><input type="text" name="movieName" id="movieName" required="true" /></label>
+      </div>
+      <!-- Added a rating system from https://codepen.io/neilpomerleau/pen/wzxzQM  -->
+      <div class="form-row">
+        <div class="ratingTitle">
+        <label for="Rating"> <b>Rating</b></label>
+        </div>
+        <div class="rating">
+        <!-- <label for="Rating"> <b>Rating</b><label> -->
+        <label>
+          <input type="radio" name="stars" value="1" />
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="2" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="3" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="4" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="stars" value="5" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+      </div>
+      </div>
+      <!-- Created a file input type for user to get images and display on website https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document.-->
+      <div class="form-row">
+        <label for="movieImage"> <b>Movie image:</b> <input type="file" accept="image/*" onchange="loadFile(event)" />
+          <p><img id="output" width="300"/></p></label>
+      </div>
+      <!-- Submit buttons directs user to task list on the same page -->
+      <div class="form-row">
+        <input type="submit" />
+      </div>
+    </form>
+    <!-- Users can view people's answers, read terms and conditions and get help -->
+    <div class="footer">
+      <ul class="Footer">
+      <li class="footerButtons"><c href="#FAQ"><b>FAQ</b></c></li>
+      <li class="footerButtons"><c href="#TermsandConditions"><b>T&Cs</b></c></li>
+      <li class="footerButtons"><c href="#Help"><b>Help</b></c></li>
+      </ul>
+  </div>
+    <main>
+      <section>
+        <!-- <p>Testing</p> -->
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
