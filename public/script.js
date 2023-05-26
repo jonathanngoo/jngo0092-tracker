@@ -46,6 +46,22 @@ submit.addEventListener("click", () => {
   }
 });
 
+// Hiding the form when user starts website and appears when they click submit button
+const hideDropdown = document.getElementByClass("hideDropdown");
+const showButton = document.getElementByClass("trashBinbutton");
+const hideButton = document.getElementByClass("select");
+
+function trashBinbutton() {
+  hideDropdown.classList.remove("hidden");
+}
+
+function select() {
+  hideDropdown.classList.add("hidden");
+}
+
+showButton.addEventListener("click", trashBinbutton);
+hideButton.addEventListener("click", select);
+
 // Creating a form for the user to input their information
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");

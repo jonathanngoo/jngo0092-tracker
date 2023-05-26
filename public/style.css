@@ -178,7 +178,7 @@ li a {
     margin: 0 auto;
     /* border: 2px solid grey; */
     padding: 2em 1em;
-    margin-top: -10em;
+    margin-top: -8em;
     text-align: left;
     margin-left: 1em;
   }
@@ -430,6 +430,10 @@ li c {
 .footerButtons {
   color: black;
   padding: 0.5em;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Resolution applied to mobile */

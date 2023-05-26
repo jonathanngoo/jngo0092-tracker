@@ -100,9 +100,11 @@
       </div>
     </header>
     <div class="Tasks">
+      <div id="hideButton" class="hidden">
       <div class="taskTitle">
       <h2>Tasks</h2>
       </div>
+    </div>
       <!-- Users can select their own tasks -->
       <h3 class="selectYourtask">Select your task</h3>
       <select class="select" name="Task" id="Task">
@@ -113,11 +115,13 @@
         <option value="task5">task5</option>
       </select>
       <!-- Users have the option to remove a list from their tasks -->
+      <div id="hideButton" class="hidden">
       <div class="trashBinbutton">
       <button type="trashBin">
         <img class="trashBin" src="trash bin/wastebasket.png" width="30" height="40">
       </button>
       </div>
+    </div>
       <!-- Content div tag contains a list of information from user input -->
       <div class="content">
         <ul id="taskList" class="data">
