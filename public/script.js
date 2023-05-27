@@ -5,13 +5,23 @@ var loadFile = function (event) {
 };
 
 // Displaying data from form individually https://www.youtube.com/watch?v=f3fALMAVBOE
-var content = document.getElementById("content");
-document.querySelector(content) .DOMContentLoaded = (document) => {
-  document.querySelector('#name').on('change', function(){
-  document.querySelector('.data')|
-  document.querySelector('#' + document.querySelector(this).value).fadeIn(700);
+// var content = document.getElementById("content");
+// document.querySelector(content) .DOMContentLoaded = (document) => {
+//   document.querySelector('#name').on('change', function(){
+//   document.querySelector('.data')|
+//   document.querySelector('#' + document.querySelector(this).value).fadeIn(700);
+// });
+// };
+
+const el = document.getElementById("Task");
+const box = document.getElementById("content");
+el.addEventListener("change", function handleChange(event) {
+  if (event.target.value === "show") {
+    box.style.visibility = "visible";
+  } else {
+    box.style.visibility = "hidden";
+  }
 });
-};
 
 // Generating today's date from server https://stackoverflow.com/questions/71953018/html-input-date-field-how-to-set-default-value-to-todays-date
 function getDate() {
@@ -26,7 +36,7 @@ function getDate() {
 }
 
 // Adding a rating system when the user types their movie name https://codepen.io/neilpomerleau/pen/wzxzQM
-document.querySelector("radio").addEventListener("change", function () {
+document.querySelector("radio").change("change", function () {
   console.log("New star rating: " + this.value);
 });
 
