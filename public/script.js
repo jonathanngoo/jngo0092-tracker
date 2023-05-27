@@ -34,10 +34,10 @@ function getDate() {
 // });
 
 // Reveals tasks after user clicks submit from https://bobbyhadz.com/blog/javascript-show-hide-form-on-click
-const submit = document.getElementByType("submit");
+const submit = document.getElementById("Task");
 
 submit.addEventListener("click", () => {
-  const Task = document.getElementByClass("Tasks");
+  const Task = document.getElementById("content");
 
   if (Task.style.display === "none") {
     Task.style.display = "block";
@@ -47,9 +47,9 @@ submit.addEventListener("click", () => {
 });
 
 // Hiding the form when user starts website and appears when they click submit button
-const hideDropdown = document.getElementByClass("hideDropdown");
-const showButton = document.getElementByClass("trashBinbutton");
-const hideButton = document.getElementByClass("select");
+const hideDropdown = document.getElementById("hideButton");
+const showButton = document.getElementById("trashBinbutton");
+const hideButton = document.getElementById("Task");
 
 function trashBinbutton() {
   hideDropdown.classList.remove("hidden");
@@ -68,18 +68,18 @@ const tasklistElem = document.querySelector("#tasklist");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log(form.elements.UserFirstName.value);
+  // console.log(form.elements.UserFirstName.value);
   addTask(
-    form.elements.UserFirstName.value,
-    form.elements.UserLastName.value,
-    form.elements.UserId.value,
-    form.elements.DateSubmitted.value,
-    form.elements.MovieGenre.value,
-    form.elements.phoneNumber.value,
-    form.elements.Email.value,
-    form.elements.movieName.value,
-    form.elements.ratingTitle.value,
-    form.elements.movieImage.value
+    form.elements.UserFirstName,
+    form.elements.UserLastName,
+    form.elements.UserId,
+    form.elements.DateSubmitted,
+    form.elements.MovieGenre,
+    form.elements.phoneNumber,
+    form.elements.Email,
+    form.elements.movieName,
+    form.elements.ratingTitle,
+    form.elements.movieImage
   );
   console.log(taskList);
 });
@@ -89,7 +89,7 @@ function displayTask(task) {
   let item = document.createElement("li");
   item.setAttribute("data-id", task.id);
   item.innerHTML = `<p> 
-  <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${date.submitted}<br>${movie.genre} 
+  <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${Date.submitted}<br>${movie.genre} 
   <br>${phone.number}<br>${email}<br>${movie.name}<br>${rating.title}<br>${movie.image}<p>`;
   tasklistElem.appendChild(item);
   form.reset();
@@ -196,7 +196,7 @@ function addTask(
   });
 }
 
-updateList();
+// updateList();
 
 // function updateList() {
 //   let list;

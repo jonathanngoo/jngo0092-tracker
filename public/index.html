@@ -100,10 +100,8 @@
       </div>
     </header>
     <div class="Tasks">
-      <div id="hideButton" class="hidden">
       <div class="taskTitle">
       <h2>Tasks</h2>
-      </div>
     </div>
       <!-- Users can select their own tasks -->
       <h3 class="selectYourtask">Select your task</h3>
@@ -116,7 +114,7 @@
       </select>
       <!-- Users have the option to remove a list from their tasks -->
       <div id="hideButton" class="hidden">
-      <div class="trashBinbutton">
+      <div class="trashBinbutton" id="trashBinbutton">
       <button type="trashBin">
         <img class="trashBin" src="trash bin/wastebasket.png" width="30" height="40">
       </button>
@@ -277,12 +275,14 @@
       </div>
       <!-- Created a file input type for user to get images and display on website https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document.-->
       <div class="form-row">
-        <label for="movieImage"> <b>Movie image:</b> <input type="file" accept="image/*" onchange="loadFile(event)" />
-          <p><img id="output" width="300"/></p></label>
+        <label for="movieImage"> <b>Movie image:</b>  
+        <input type="file" accept="image/*" onchange="loadFile(event)" />
+        <p><img id="output" width="300"/></p>
+        </label> 
       </div>
       <!-- Submit buttons directs user to task list on the same page -->
       <div class="form-row">
-        <a href="#Task"><input type="submit"/></a>
+        <a href="#Task" id="Task"><input type="submit"/></a>
       </div>
     </form>
     <!-- Users can view people's answers, read terms and conditions and get help -->

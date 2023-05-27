@@ -121,6 +121,7 @@ li a {
   -moz-animation: fadeIn 5s;
   -o-animation: fadeIn 5s;
   -ms-animation: fadeIn 5s;
+  margin-top: 2em;
 }
 
 /* Animation for title images and compatibility with all browsers https://blog.hubspot.com/website/css-fade-in */
@@ -442,6 +443,14 @@ li c {
 
 .hidden {
   display: none;
+}
+
+.output {
+  width: 300px;
+}
+
+input[type=file]{
+  padding: auto;
 }
 
 /* Resolution applied to mobile */
