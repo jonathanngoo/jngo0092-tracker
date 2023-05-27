@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-body, h1, h2, h4, h5, h6, p, ol, ul {
+body, h1, h2, h4, h5, h6, p, ol, ul{
   margin: 0;
   padding: 0;
   /* font-weight: normal; */
@@ -259,6 +259,14 @@ li a {
     background-color: #59D4C0;
     color: white;
     font-size: 1em;
+    padding: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 27em;
+    margin-top: -1em;
+    margin-right: -5em;
   }
   
   button[type=trashBin] {
@@ -510,12 +518,6 @@ li c {
 
   h3.selectYourtask {
     margin-bottom: 2em;
-  }
-
-  input[type=submit] {
-    margin-bottom: 27em;
-    margin-top: -1em;
-    margin-right: -5em;
   }
 
   figcaption {
