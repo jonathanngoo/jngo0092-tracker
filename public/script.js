@@ -4,15 +4,8 @@ var loadFile = function (event) {
   image.src = URL.createObjectURL(event.target.files[0]);
 };
 
-// Displaying data from form individually https://www.youtube.com/watch?v=f3fALMAVBOE
-// var content = document.getElementById("content");
-// document.querySelector(content) .DOMContentLoaded = (document) => {
-//   document.querySelector('#name').on('change', function(){
-//   document.querySelector('.data')|
-//   document.querySelector('#' + document.querySelector(this).value).fadeIn(700);
-// });
-// };
 
+// Displaying data from form individually https://www.tutorialspoint.com/how-can-i-show-a-hidden-div-when-a-select-option-is-selected-in-javascript
 const el = document.getElementById("Task");
 const box = document.getElementById("content");
 el.addEventListener("change", function handleChange(event) {
