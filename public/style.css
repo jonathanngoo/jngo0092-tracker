@@ -151,11 +151,13 @@ li a {
 }
 
 .Context {
+  margin-top: 3em;
   margin-left: 1em;
 }
 
 .typesOfgenresTitle {
-  margin-left: 0em;
+  margin-top: 4em;
+  margin-left: -1em;
 }
 
 /* It's used to place genre images using 2 by 2 layout */
@@ -290,6 +292,7 @@ li a {
 
   .Tasks{
     margin-left: 50em;
+    margin-top: 4em;
   }
 
   .taskTitle{
@@ -342,7 +345,7 @@ li a {
 
 .logMovies {
   color:black;
-  margin-top: 54em;
+  margin-top: 63em;
   margin-left: -13em;
 }
 
@@ -427,6 +430,8 @@ li a {
   background-color: #59D4C0;
   margin:auto;
   color:black;
+  margin-right: -42em;
+  margin-top: -16em;
 }
 
 /* Buttons applied to the footer  */
@@ -494,6 +499,7 @@ input[type=file]{
     width: 40%;
     flex-direction: column;
     margin-left: 1em;
+    margin-top: 3em;
   }
 
   .logMovies {
