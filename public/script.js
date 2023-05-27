@@ -29,9 +29,9 @@ function getDate() {
 }
 
 // Adding a rating system when the user types their movie name https://codepen.io/neilpomerleau/pen/wzxzQM
-document.querySelector("radio").change("change", function () {
-  console.log("New star rating: " + this.value);
-});
+// document.querySelector("radio").addEventListener("change", function () {
+//   console.log("New star rating: " + this.value);
+// });
 
 // Reveals tasks after user clicks submit from https://bobbyhadz.com/blog/javascript-show-hide-form-on-click
 const submit = document.getElementByType("submit");
