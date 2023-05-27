@@ -17,7 +17,7 @@ body, h1, h2, h4, h5, h6, p, ol, ul{
 /* Own css starts from here  */
 h1{
   margin: auto;
-    margin-left: 27em;
+  margin-left: 26em;
     margin-bottom: 1em;
   /* color: white; */
 }
@@ -53,15 +53,15 @@ html {
   background-attachment: fixed;
   margin: 0;
   height: 100%;
-  width: 100%;
+  width: 30%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* Generate CSS layout from https://layout.bradwoods.io/customize */
  .layout {
-  width: 1366px;
-  height: 768px;
+  width: 1050px;
+  height: 600px;
 
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@ html {
 .header { 
   grid-area: header; 
   margin-top: 0em;
-  margin-right: -2.5em;
+  margin-right: -18.5em;
 }
 
 
@@ -168,6 +168,7 @@ li a {
   align-content: center;
   justify-content: center;
   align-items: flex-start;
+  margin-left: 15em;
 }
 .footer { grid-area: footer; }
                   
@@ -178,12 +179,10 @@ li a {
                   
   form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: -13em -22em 0px 1em;
     /* border: 2px solid grey; */
     padding: 2em 1em;
-    margin-top: -8em;
     text-align: left;
-    margin-left: 1em;
   }
 
   figcaption {
@@ -291,7 +290,7 @@ li a {
   }
 
   .Tasks{
-    margin-left: 50em;
+    margin-left: 47em;
     margin-top: 4em;
   }
 
@@ -345,7 +344,7 @@ li a {
 
 .logMovies {
   color:black;
-  margin-top: 63em;
+  margin-top: 71em;
   margin-left: -13em;
 }
 
@@ -430,8 +429,8 @@ li a {
   background-color: #59D4C0;
   margin:auto;
   color:black;
-  margin-right: -42em;
-  margin-top: -16em;
+  margin-right: -74em;
+  margin-top: -3em;
 }
 
 /* Buttons applied to the footer  */
