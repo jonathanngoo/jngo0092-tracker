@@ -70,16 +70,16 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   // console.log(form.elements.UserFirstName.value);
   addTask(
-    form.elements.UserFirstName,
-    form.elements.UserLastName,
-    form.elements.UserId,
-    form.elements.DateSubmitted,
-    form.elements.MovieGenre,
-    form.elements.phoneNumber,
-    form.elements.Email,
-    form.elements.movieName,
-    form.elements.ratingTitle,
-    form.elements.movieImage
+    form.elements.userFirstName.value,
+    form.elements.userLastName.value,
+    form.elements.userId.value,
+    form.elements.dateSubmitted.value,
+    form.elements.movieGenre.value,
+    form.elements.phoneNumber.value,
+    form.elements.email.value,
+    form.elements.movieName.value,
+    form.elements.stars.value,
+    form.elements.movieImage.value
   );
   console.log(taskList);
 });
@@ -89,8 +89,8 @@ function displayTask(task) {
   let item = document.createElement("li");
   item.setAttribute("data-id", task.id);
   item.innerHTML = `<p> 
-  <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${Date.submitted}<br>${movie.genre} 
-  <br>${phone.number}<br>${email}<br>${movie.name}<br>${rating.title}<br>${movie.image}<p>`;
+  <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${date.submitted}<br>${movie.genre} 
+  <br>${phone.number}<br>${email}<br>${movie.name}<br>${stars}<br>${movie.image}<p>`;
   tasklistElem.appendChild(item);
   form.reset();
 
