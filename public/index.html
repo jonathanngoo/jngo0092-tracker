@@ -206,10 +206,10 @@
         <label for="UserId"> <b>User Id</b><input type="number" name="userId" id="userId" min="400000000" max="600000000" name="UserId" id="UserId" required="true" /></label>
       </div>
       <div class="form-row">
-        <label for="DateSubmitted"><b>Date Submitted  <input type="date" name="dateSubmitted" id="dateSubmitted" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
+        <label for="DateSubmitted"><b>Date Submitted  <input type="date" name="userDateSubmitted" id="userDateSubmitted" onload="getDate()" class="form-control" id="date" name="date"></input></b></label>
       </div>
       <div class="form-row">
-        <label for="MovieGenre"> <b>Movie Genre</b><select name="movieGenre" id="movieGenre" required="true">
+        <label for="MovieGenre"> <b>Movie Genre</b><select name="userMovieGenre" id="userMovieGenre" required="true">
           <option value="">Select Genre</option>
           <option value="Action">Action</option>
           <option value="Horror">Horror</option>
@@ -223,16 +223,16 @@
           type="number"
           min="0100000000"
           max="1000000000"
-          name="phoneNumber"
-          id="phoneNumber"
+          name="userPhoneNumber"
+          id="userPhoneNumber"
           required="true"
         /></label>
       </div>
       <div class="form-row">
-        <label for="Email"> <b>Email</b> <input type="text" name="email" id="email" required="true" /></label>
+        <label for="Email"> <b>Email</b> <input type="text" name="userEmail" id="userEmail" required="true" /></label>
       </div>
       <div class="form-row">
-        <label for="movieName"> <b>Movie Name</b><input type="text" name="movieName" id="movieName" required="true" /></label>
+        <label for="movieName"> <b>Movie Name</b><input type="text" name="userMovieName" id="userMovieName" required="true" /></label>
       </div>
       <!-- Added a rating system from https://codepen.io/neilpomerleau/pen/wzxzQM  -->
       <div class="form-row">
@@ -242,29 +242,29 @@
         <div class="rating">
         <!-- <label for="Rating"> <b>Rating</b><label> -->
         <label>
-          <input type="radio" name="stars" id="stars" value="1" />
+          <input type="radio" name="userStars" id="userStars" value="1" />
           <span class="icon">★</span>
         </label>
         <label>
-          <input type="radio" name="stars" id="stars" value="2" />
-          <span class="icon">★</span>
-          <span class="icon">★</span>
-        </label>
-        <label>
-          <input type="radio" name="stars" id="stars" value="3" />
-          <span class="icon">★</span>
+          <input type="radio" name="userStars" id="userStars" value="2" />
           <span class="icon">★</span>
           <span class="icon">★</span>
         </label>
         <label>
-          <input type="radio" name="stars" id="stars" value="4" />
-          <span class="icon">★</span>
+          <input type="radio" name="userStars" id="userStars" value="3" />
           <span class="icon">★</span>
           <span class="icon">★</span>
           <span class="icon">★</span>
         </label>
         <label>
-          <input type="radio" name="stars" id="stars" value="5" />
+          <input type="radio" name="userStars" id="userStars" value="4" />
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+          <span class="icon">★</span>
+        </label>
+        <label>
+          <input type="radio" name="userStars" id="userStars" value="5" />
           <span class="icon">★</span>
           <span class="icon">★</span>
           <span class="icon">★</span>
@@ -276,7 +276,7 @@
       <!-- Created a file input type for user to get images and display on website https://talkerscode.com/howto/upload-image-in-html-and-display.php#:~:text='image'%20variable%20containing%20uploaded%20image,the%20end%20of%20HTML%20document.-->
       <div class="form-row">
         <label for="movieImage"> <b>Movie image:</b>  
-        <input type="file" name="movieImage" id="movieImage" accept="image/*" onchange="loadFile(event)" />
+        <input type="file" name="userMovieImage" id="userMovieImage" accept="image/*" onchange="loadFile(event)" />
         <p><img id="output" width="300"/></p>
         </label> 
       </div>

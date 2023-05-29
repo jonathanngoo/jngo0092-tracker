@@ -80,7 +80,7 @@ function addTask(
   image
 ) {
   // Creating task list to displayed when user selects their tasks
-  let task = {
+  let user = {
     firstname,
     lastname,
     id,
@@ -93,8 +93,8 @@ function addTask(
     image,
   };
 
-  taskList.push(task);
-  displayTask(task);
+  taskList.push(user);
+  displayTask(user);
 }
 
 
@@ -106,24 +106,24 @@ form.addEventListener("submit", function (event) {
     form.elements.userFirstName.value,
     form.elements.userLastName.value,
     form.elements.userId.value,
-    form.elements.dateSubmitted.value,
-    form.elements.movieGenre.value,
-    form.elements.phoneNumber.value,
-    form.elements.email.value,
-    form.elements.movieName.value,
-    form.elements.stars.value,
-    form.elements.movieImage.value
+    form.elements.userDateSubmitted.value,
+    form.elements.userMovieGenre.value,
+    form.elements.userPhoneNumber.value,
+    form.elements.userEmail.value,
+    form.elements.userMovieName.value,
+    form.elements.userStars.value,
+    form.elements.userMovieImage.value
   );
   // console.log(taskList);
 });
 
 // Tasks are displayed from drop down menu
-function displayTask(task) {
+function displayTask(user) {
   let item = document.createElement("li");
   item.setAttribute("data-id", user.id);
   item.innerHTML = `<p> 
-  <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${date.submitted}<br>${movie.genre} 
-  <br>${phone.number}<br>${email}<br>${movie.name}<br>${stars}<br>${movie.image}<p>`;
+  <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${user.datesubmitted}<br>${user.moviegenre} 
+  <br>${user.phonenumber}<br>${user.email}<br>${user.moviename}<br>${user.stars}<br>${user.movieimage}<p>`;
   tasklistElem.appendChild(item);
   form.reset();
 
