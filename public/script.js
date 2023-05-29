@@ -119,7 +119,7 @@ form.addEventListener("submit", function (event) {
 
 // Tasks are displayed from drop down menu
 function displayTask(user) {
-  let item = document.createElement("li");
+  let item = document.createElement("taskList");
   item.setAttribute("data-id", user.id);
   item.innerHTML = `<p> 
   <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${user.datesubmitted}<br>${user.moviegenre} 
@@ -134,9 +134,9 @@ function displayTask(user) {
 
   delButton.addEventListener("click", function (event) {
     item.remove();
-    taskList.forEach(function (taskArrayElement, taskArrayIndex) {
-      if (taskArrayElement.id == item.getAttribute("data-id")) {
-        taskList.splice(taskArrayIndex, 1);
+    taskList.forEach(function (userArrayElement, userArrayIndex) {
+      if (userArrayElement.id == item.getAttribute("data-id")) {
+        taskList.splice(userArrayIndex, 1);
       }
     });
     console.log(taskList);
