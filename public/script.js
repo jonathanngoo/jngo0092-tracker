@@ -16,6 +16,7 @@ el.addEventListener("change", function handleChange(event) {
   }
 });
 
+
 // Generating today's date from server https://stackoverflow.com/questions/71953018/html-input-date-field-how-to-set-default-value-to-todays-date
 function getDate() {
   var today = new Date();
@@ -119,7 +120,7 @@ form.addEventListener("submit", function (event) {
 
 // Tasks are displayed from drop down menu
 function displayTask(user) {
-  let item = document.createElement("taskList");
+  let item = document.getElementById("taskList");
   item.setAttribute("data-id", user.id);
   item.innerHTML = `<p> 
   <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${user.datesubmitted}<br>${user.moviegenre} 
@@ -127,7 +128,7 @@ function displayTask(user) {
   userlist.appendChild(task);
   form.reset();
 
-  let delButton = document.createElement("button");
+  let delButton = document.getElementById("trashBinbutton");
   let delButtonText = document.createTextNode("🗑️");
   delButton.appendChild(delButtonText);
   item.appendChild(delButton);
