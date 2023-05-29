@@ -6,8 +6,8 @@ var loadFile = function (event) {
 
 
 // Displaying data from form individually https://www.tutorialspoint.com/how-can-i-show-a-hidden-div-when-a-select-option-is-selected-in-javascript
-const el = document.getElementById("Task");
-const box = document.getElementById("content");
+const el = document.getElementById("content");
+const box = document.getElementById("taskList");
 el.addEventListener("change", function handleChange(event) {
   if (event.target.value === "show") {
     box.style.visibility = "visible";
