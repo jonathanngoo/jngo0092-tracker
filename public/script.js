@@ -66,6 +66,39 @@ hideButton.addEventListener("click", select);
 const form = document.getElementById("taskform");
 const tasklistElem = document.querySelector("#tasklist");
 
+var taskList = [];
+
+function addTask(
+  firstname,
+  lastname,
+  id,
+  genre,
+  number,
+  email,
+  name,
+  rating,
+  image
+) {
+  // Creating task list to displayed when user selects their tasks
+  let task = {
+    firstname,
+    lastname,
+    id,
+    submitted: Date.now(),
+    genre,
+    number,
+    email,
+    name,
+    rating,
+    image,
+  };
+
+  taskList.push(task);
+  displayTask(task);
+}
+
+
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   // console.log(form.elements.UserFirstName.value);
@@ -81,13 +114,13 @@ form.addEventListener("submit", function (event) {
     form.elements.stars.value,
     form.elements.movieImage.value
   );
-  console.log(taskList);
+  // console.log(taskList);
 });
 
 // Tasks are displayed from drop down menu
 function displayTask(task) {
   let item = document.createElement("li");
-  item.setAttribute("data-id", task.id);
+  item.setAttribute("data-id", user.id);
   item.innerHTML = `<p> 
   <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${date.submitted}<br>${movie.genre} 
   <br>${phone.number}<br>${email}<br>${movie.name}<br>${stars}<br>${movie.image}<p>`;
@@ -107,6 +140,7 @@ function displayTask(task) {
       }
     });
     console.log(taskList);
+    item.remove();
   });
 }
 
@@ -134,72 +168,71 @@ function displayTask(task) {
 // console.log(task);
 
 // Adding task list when the user submits the form
-var taskList = [];
+// var taskList = [];
 
-function addTask(
-  userfirstname,
-  userlastname,
-  userid,
-  datesubmitted,
-  moviegenre,
-  phonenumber,
-  email,
-  moviename,
-  rating,
-  movieimage
-) {
-  // Creating task list to displayed when user selects their tasks
-  let task = {
-    userfirstname,
-    userlastname,
-    userid,
-    datesubmitted: Date.now(),
-    moviegenre,
-    phonenumber,
-    email,
-    moviename,
-    rating,
-    movieimage,
-  };
+// function addTask(
+//   firstname,
+//   lastname,
+//   id,
+//   genre,
+//   number,
+//   email,
+//   name,
+//   rating,
+//   image
+// ) {
+//   // Creating task list to displayed when user selects their tasks
+//   let task = {
+//     firstname,
+//     lastname,
+//     id,
+//     submitted: Date.now(),
+//     genre,
+//     number,
+//     email,
+//     name,
+//     rating,
+//     image,
+//   };
 
-  taskList.push(task);
-  displayTask(task);
+//   taskList.push(task);
+//   displayTask(task);
 
-  let listButton = document.createElement("button");
-  let card = document.createElement("card");
-  listButton.textContent = "Add to list";
-  card.appendChild(listButton);
+//   let listButton = document.createElement("button");
+//   let card = document.createElement("card");
+//   listButton.textContent = "Add to list";
+//   card.appendChild(listButton);
 
-  // When users clicks submit, it displays list of tasks from content div tag
-  listButton.addEventListener("click", function (event) {
-    console.log(user.name.common);
+//   // When users clicks submit, it displays list of tasks from content div tag
+//   listButton.addEventListener("click", function (event) {
+//     console.log(user.name.common);
 
-    let listOftasks = JSON.parse(localStorage.getItem("listOftasks"));
+//     let listOftasks = JSON.parse(localStorage.getItem("listOftasks"));
 
-    console.log(listOftasks);
-    if (listOftasks == null) {
-      listOftasks = [client];
-    } else {
-      if (
-        listOftasks.find(
-          (element) => element.user.name.common === user.last.name.common
-        )
-      ) {
-        console.log("Person already exists");
-      } else {
-        listOftasks.push(user);
-      }
-    }
+//     console.log(listOftasks);
+//     if (listOftasks == null) {
+//       listOftasks = [client];
+//     } else {
+//       if (
+//         listOftasks.find(
+//           (element) => element.user.name.common === user.last.name.common
+//         )
+//       ) {
+//         console.log("Person already exists");
+//       } else {
+//         listOftasks.push(user);
+//       }
+//     }
 
-    localStorage.setItem("listOftasks", JSON.stringify(listOftasks));
-    updateList();
-  });
-}
-
-// updateList();
-
-// function updateList() {
-//   let list;
+//     localStorage.setItem("listOftasks", JSON.stringify(listOftasks));
+//     updateList();
+//   });
 // }
 
-console.log(taskList);
+// // updateList();
+
+// // function updateList() {
+// //   let list;
+// // }
+
+// console.log(taskList);
