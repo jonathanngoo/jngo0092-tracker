@@ -64,9 +64,9 @@ hideButton.addEventListener("click", select);
 
 // Creating a form for the user to input their information
 const form = document.getElementById("taskform");
-const tasklistElem = document.querySelector("#tasklist");
+const userlist = document.getElementById("taskList");
 
-var taskList = [];
+var userList = [];
 
 function addTask(
   firstname,
@@ -93,7 +93,7 @@ function addTask(
     image,
   };
 
-  taskList.push(user);
+  userList.push(user);
   displayTask(user);
 }
 
@@ -124,7 +124,7 @@ function displayTask(user) {
   item.innerHTML = `<p> 
   <strong>${user.firstname}</strong><br>${user.lastname} <br>${user.id}<br>${user.datesubmitted}<br>${user.moviegenre} 
   <br>${user.phonenumber}<br>${user.email}<br>${user.moviename}<br>${user.stars}<br>${user.movieimage}<p>`;
-  tasklistElem.appendChild(item);
+  userlist.appendChild(task);
   form.reset();
 
   let delButton = document.createElement("button");
@@ -134,15 +134,16 @@ function displayTask(user) {
 
   delButton.addEventListener("click", function (event) {
     item.remove();
-    taskList.forEach(function (userArrayElement, userArrayIndex) {
+    userList.forEach(function (userArrayElement, userArrayIndex) {
       if (userArrayElement.id == item.getAttribute("data-id")) {
-        taskList.splice(userArrayIndex, 1);
+        userList.splice(userArrayIndex, 1);
       }
     });
-    console.log(taskList);
+    console.log(userList);
     item.remove();
   });
 }
+
 
 // function displayRadioValue() {
 //   var value = document.getElementsByName("UserFirstName").value;
